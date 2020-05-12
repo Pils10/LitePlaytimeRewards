@@ -19,24 +19,15 @@ public class PlaytimeCommand extends LitePlaytimeRewardsCommand {
             case 0:
                 //check if player
                 if (this.checkIfPlayer() && this.checkPermission("playtime")) {
-                    if (this.plugin.getLPRConfig().isCountAllPlaytime()) {
-                        this.cs.sendMessage(this.plugin.getMessages().getPlaytime(sender.getStatistic(Statistic.PLAY_ONE_MINUTE)));
-                    } else {
-                        //get player data
-                        LitePlaytimeRewardsCRUD crudplay = this.plugin.getFromCRUDCache(sender.getUniqueId());
-                        this.cs.sendMessage(this.plugin.getMessages().getPlaytime(crudplay.getPlaytime() + crudplay.getAfktime()));
-                    }
+                    //get player data
+                    LitePlaytimeRewardsCRUD crudplay = this.plugin.getFromCRUDCache(sender.getUniqueId());
+                    this.cs.sendMessage(this.plugin.getMessages().getPlaytime(crudplay.getPlaytime() + crudplay.getAfktime()));
                 }
                 break;
             case 1:
                 //check for permission
                 if (this.checkPermission("playtime.other")) {
                     OfflinePlayer plyrplayother = Bukkit.getOfflinePlayer(args[0]);
-
-                    if (this.plugin.getLPRConfig().isCountAllPlaytime() && plyrplayother.isOnline()) {
-                        this.cs.sendMessage(this.plugin.getMessages().getPlaytimeOther(((Player) plyrplayother).getStatistic(Statistic.PLAY_ONE_MINUTE), plyrplayother.getName()));
-                        break;
-                    }
 
                     //check if player has played on server before
                     if (!LitePlaytimeRewardsCRUD.doesPlayerDataExists(plyrplayother)) {
