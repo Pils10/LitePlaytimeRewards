@@ -1,7 +1,7 @@
 package com.backtobedrock.LitePlaytimeRewards.guis;
 
 import com.backtobedrock.LitePlaytimeRewards.LitePlaytimeRewards;
-import com.backtobedrock.LitePlaytimeRewards.configs.Config;
+import com.backtobedrock.LitePlaytimeRewards.configurations.Config;
 import java.util.Arrays;
 import java.util.List;
 import org.bukkit.Material;

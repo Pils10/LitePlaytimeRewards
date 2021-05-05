@@ -1,10 +1,9 @@
 package com.backtobedrock.LitePlaytimeRewards.guis;
 
-import com.backtobedrock.LitePlaytimeRewards.enums.GUIType;
 import com.backtobedrock.LitePlaytimeRewards.guis.clickActions.ClickAction;
 import com.backtobedrock.LitePlaytimeRewards.guis.clickActions.GiveRewardClickAction;
-import com.backtobedrock.LitePlaytimeRewards.models.ConfigReward;
-import com.backtobedrock.LitePlaytimeRewards.models.GUIReward;
+import com.backtobedrock.LitePlaytimeRewards.domain.ConfigReward;
+import com.backtobedrock.LitePlaytimeRewards.domain.GUIReward;
 import java.util.Arrays;
 import java.util.TreeMap;
 import java.util.stream.Collectors;

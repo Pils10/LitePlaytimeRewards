@@ -1,8 +1,7 @@
 package com.backtobedrock.LitePlaytimeRewards.guis;
 
-import com.backtobedrock.LitePlaytimeRewards.configs.PlayerData;
-import com.backtobedrock.LitePlaytimeRewards.enums.GUIType;
-import com.backtobedrock.LitePlaytimeRewards.models.Reward;
+import com.backtobedrock.LitePlaytimeRewards.domain.data.PlayerData;
+import com.backtobedrock.LitePlaytimeRewards.domain.Reward;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

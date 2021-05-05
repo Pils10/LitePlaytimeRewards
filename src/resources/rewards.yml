@@ -1,25 +1,124 @@
-#Not sure what a particular reward option does?
-#Visit the LitePlaytimeRewards wiki for an explanation of each option at https://github.com/NathanCollaert/LitePlaytimeRewards/wiki/Reward-Configuration
+############################################################
+# +------------------------------------------------------+ #
+# |                       PLAYTIME                       | #
+# +------------------------------------------------------+ #
+############################################################
+
+Playtime:
+  #How much playtime does a player need in order to be eligible to gain playtime towards this reward?
+  #In minutes, minimum is 0
+  Minimum: 0
+
+  #How long does the player have to play for in order to claim this reward?
+  #In minutes, minimum is 1
+  Needed: 60
+
+  #Should this reward loop infinitely?
+  Loop: true
+
+  #How long should the reward go on cooldown for after claim?
+  Cooldown: 0
+
+  #Should AFK time be counted towards this reward?
+  #Requires essentialsX/CMI
+  CountAfk: false
+
+  #Should playtime gathered from before this plugin was installed count towards this reward?
+  CountAll: true
+
+
+############################################################
+# +------------------------------------------------------+ #
+# |                       REWARDS                        | #
+# +------------------------------------------------------+ #
+############################################################
+
 Rewards:
-    testreward:
-        DisplayName: "&6Test &eReward"
-        DisplayItem: "ender_chest"
-        DisplayDescription:
-            - "This will go on the first line."
-            - "This will go on the second line."
-            - "This will go on the third line."
-        PlaytimeNeeded: 60
-        CountAfkTime: false
-        CountAllPlaytime: true
-        SlotsNeeded: 2
-        Loop: true
-        DisabledWorlds:
-            - "world_nether"
-            - "world_the_end"
-        UsePermission: true
-        NotificationType: "bossbar"
-        Notification: "You have received the Test Reward! Congratulations!"
-        BroadcastNotification: "%player% has been awarded with the test reward!"
-        Commands:
-            - "give %player% dirt 1"
-            - "give %player% grass_block 1"
+  #Which commands should be executed when claiming this reward?
+  Commands:
+    - "give %player% dirt 1"
+    - "give %player% grass_block 1"
+
+  Items:
+
+
+
+############################################################
+# +------------------------------------------------------+ #
+# |                       DISPLAY                        | #
+# +------------------------------------------------------+ #
+############################################################
+
+Display:
+  Item: "ender_chest"
+  Name: "&6Test &eReward"
+  Lore:
+    - "This will go on the first line."
+    - "This will go on the second line."
+    - "This will go on the third line."
+
+
+############################################################
+# +------------------------------------------------------+ #
+# |                     NOTIFICATIONS                    | #
+# +------------------------------------------------------+ #
+############################################################
+
+Notifications:
+  Actionbar:
+    Enable: false
+    TextStart: "You have been combat tagged by &c&l%combat_tagger%&r."
+    TextEnd: "Your combat tag with &c&l%combat_tagger%&r ran out."
+  Bossbar:
+    Enable: true
+    Text: "You have been combat tagged by &c&l%combat_tagger%&r, do &c&lnot&r log out!"
+    Color: "red"
+    Style: "solid"
+  Chat:
+    Enable: true
+    TextStart: "You have been combat tagged by &c&l%combat_tagger%&r."
+    TextEnd: "Your combat tag with &c&l%combat_tagger%&r ran out."
+  Title:
+    Enable: false
+    TitleStart: "Combat Tagged"
+    SubtitleStart: "You have been combat tagged by &c&l%combat_tagger%&r."
+    TitleEnd: "Combat Tagged"
+    SubtitleEnd: "Your combat tag with &c&l%combat_tagger%&r ran out."
+
+BroadcastNotifications:
+  Actionbar:
+    Enable: false
+    TextStart: "You have been combat tagged by &c&l%combat_tagger%&r."
+    TextEnd: "Your combat tag with &c&l%combat_tagger%&r ran out."
+  Bossbar:
+    Enable: true
+    Text: "You have been combat tagged by &c&l%combat_tagger%&r, do &c&lnot&r log out!"
+    Color: "red"
+    Style: "solid"
+  Chat:
+    Enable: true
+    TextStart: "You have been combat tagged by &c&l%combat_tagger%&r."
+    TextEnd: "Your combat tag with &c&l%combat_tagger%&r ran out."
+  Title:
+    Enable: false
+    TitleStart: "Combat Tagged"
+    SubtitleStart: "You have been combat tagged by &c&l%combat_tagger%&r."
+    TitleEnd: "Combat Tagged"
+    SubtitleEnd: "Your combat tag with &c&l%combat_tagger%&r ran out."
+
+
+############################################################
+# +------------------------------------------------------+ #
+# |                     MISCELLANEOUS                    | #
+# +------------------------------------------------------+ #
+############################################################
+
+Miscellaneous:
+  InventorySlotsNeeded: 2
+  DisabledGainingPlaytimeWorlds:
+    - "world_nether"
+    - "world_the_end"
+  DisabledClaimingWorlds:
+    - "world_nether"
+    - "world_the_end"
+  UsePermission: true

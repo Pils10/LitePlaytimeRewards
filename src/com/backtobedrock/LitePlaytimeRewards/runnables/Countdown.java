@@ -1,8 +1,8 @@
 package com.backtobedrock.LitePlaytimeRewards.runnables;
 
 import com.backtobedrock.LitePlaytimeRewards.LitePlaytimeRewards;
-import com.backtobedrock.LitePlaytimeRewards.configs.PlayerData;
-import com.backtobedrock.LitePlaytimeRewards.models.Reward;
+import com.backtobedrock.LitePlaytimeRewards.domain.data.PlayerData;
+import com.backtobedrock.LitePlaytimeRewards.domain.Reward;
 import com.earth2me.essentials.User;
 import java.util.Map;
 import java.util.TreeMap;

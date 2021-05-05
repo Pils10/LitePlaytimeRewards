@@ -1,10 +1,10 @@
 package com.backtobedrock.LitePlaytimeRewards;
 
-import com.backtobedrock.LitePlaytimeRewards.commands.AfktimeCommand;
-import com.backtobedrock.LitePlaytimeRewards.commands.GiverewardCommand;
-import com.backtobedrock.LitePlaytimeRewards.commands.LPRCommand;
-import com.backtobedrock.LitePlaytimeRewards.commands.PlaytimeCommand;
-import com.backtobedrock.LitePlaytimeRewards.commands.RewardsCommand;
+import com.backtobedrock.LitePlaytimeRewards.commands.CommandAfktime;
+import com.backtobedrock.LitePlaytimeRewards.commands.CommandGivereward;
+import com.backtobedrock.LitePlaytimeRewards.commands.CommandLitePlaytimeRewards;
+import com.backtobedrock.LitePlaytimeRewards.commands.CommandPlaytime;
+import com.backtobedrock.LitePlaytimeRewards.commands.CommandRewards;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -14,7 +14,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
-import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.util.StringUtil;
 
@@ -31,19 +30,19 @@ public class LitePlaytimeRewardsCommands implements TabCompleter {
     public boolean onCommand(CommandSender cs, Command cmnd, String alias, String[] args) {
         switch (cmnd.getName().toLowerCase()) {
             case "playtime":
-                new PlaytimeCommand(cs, args).run();
+                new CommandPlaytime(cs, args).run();
                 break;
             case "afktime":
-                new AfktimeCommand(cs, args).run();
+                new CommandAfktime(cs, args).run();
                 break;
             case "givereward":
-                new GiverewardCommand(cs, args).run();
+                new CommandGivereward(cs, args).run();
                 break;
             case "lpr":
-                new LPRCommand(cs, args).run();
+                new CommandLitePlaytimeRewards(cs, args).run();
                 break;
             case "rewards":
-                new RewardsCommand(cs, args).run();
+                new CommandRewards(cs, args).run();
                 break;
 
         }

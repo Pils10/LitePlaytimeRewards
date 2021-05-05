@@ -1,7 +1,7 @@
 package com.backtobedrock.LitePlaytimeRewards.guis.clickActions;
 
 import com.backtobedrock.LitePlaytimeRewards.guis.PagedGUI;
-import com.backtobedrock.LitePlaytimeRewards.models.GUIReward;
+import com.backtobedrock.LitePlaytimeRewards.domain.GUIReward;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.ComponentBuilder;
 import org.bukkit.Bukkit;
