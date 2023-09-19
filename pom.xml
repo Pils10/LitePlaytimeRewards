@@ -86,8 +86,9 @@
         </repository>
         <repository>
             <id>maven-central</id>
-            <url>https://oss.sonatype.org/content/groups/public</url>
+            <url>https://papermc.io/repo/repository/maven-releases/</url>
         </repository>
+
     </repositories>
 
     <dependencies>
